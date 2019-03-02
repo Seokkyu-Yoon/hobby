@@ -1,3 +1,3 @@
 # Seokkyu-Yoon's hooby
-- java
-- node
+- java - maven projects here
+- node - noder projects jere

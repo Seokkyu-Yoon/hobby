@@ -1,1 +1,3 @@
-/**/*.csv
+hobby/node/node_modules
+hobby/java/beakjoon/**/bin
+.vscode
