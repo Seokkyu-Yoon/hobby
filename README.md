@@ -1,6 +1,6 @@
 # Seokkyu-Yoon's Computing Lab
 ## Content  
-I did my programs only VSCode
-- ### hobby ( Modified 190304 )
+I did my programs vsCode
+- ### hobby ( Modified 190307 )
   - java
   - node
