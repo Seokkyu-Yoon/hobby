@@ -1,4 +1,4 @@
-hobby/node/node_modules
+**/node_modules
 hobby/java/beakjoon/**/bin
 hobby/java/beakjoon/src/Main.java
 .vscode
