@@ -1,10 +1,10 @@
 module.exports = {
     'env': {
         'commonjs': true,
-        'es6': false,
+        'es6': true,
         'node': true
     },
-    'extends': 'google',
+    'extends': 'eslint:recommended',
     'globals': {
         'Atomics': 'readonly',
         'SharedArrayBuffer': 'readonly'
@@ -13,7 +13,7 @@ module.exports = {
         'ecmaVersion': 2018
     },
     'rules': {
-        'no-var': 0,
+        'no-console': 'off',
         'indent': [
             'error',
             2
