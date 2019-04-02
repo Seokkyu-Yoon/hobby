@@ -4,7 +4,7 @@ function solution() {
 
 const testCase = [];
 testCase.push({
-
+  
 });
 
 const runner = () => testCase.forEach(() => {
