@@ -1,3 +1,3 @@
 # Seokkyu-Yoon's hooby
-- java
-- node
+- java (Beakjoon Online judge)
+- node (Programmers)
