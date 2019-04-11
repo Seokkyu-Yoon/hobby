@@ -1,6 +1,11 @@
+/**
+ * This function is called when change n to 124 number
+ * @param {Number} n
+ * @return {String} n To 124 number
+ */
 function solution(n) {
   const get124Num = (n, acc = []) => {
-    if(n === 0) return acc;
+    if (n === 0) return acc;
     acc.push(n % 3 === 0 ? 4 : n % 3);
     return get124Num(Math.floor((n-1)/3), acc);
   };

@@ -1,6 +1,6 @@
 function solution(n) {
   const addNum = (n, acc = 0) => {
-    if(n == 0) return acc;
+    if (n == 0) return acc;
     acc += n % 10;
     return addNum(Math.floor(n/10), acc);
   };

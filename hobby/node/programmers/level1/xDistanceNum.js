@@ -1,6 +1,6 @@
 function solution(x, n) {
   const getArr = (x, n, index = 1, acc = []) => {
-    if(index > n) return acc;
+    if (index > n) return acc;
     acc.push(x * index);
     return getArr(x, n, index + 1, acc);
   };

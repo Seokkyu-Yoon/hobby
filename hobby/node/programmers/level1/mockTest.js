@@ -10,24 +10,24 @@ function solution(answers) {
       score += answer === giveUpPerson[answerIndex % giveUpPerson.length];
       return score;
     }, 0);
-    if(scores[personIndex+1] > scores.max) scores.max = scores[personIndex+1];
+    if (scores[personIndex+1] > scores.max) scores.max = scores[personIndex+1];
     return scores;
-  }, { max: 0 });
+  }, {max: 0});
 
   return Object.keys(scoreBoard)
-    .filter((key) => key !== 'max' && scoreBoard[key] === scoreBoard.max)
-    .reduce((acc, personIndex) => {
-      acc.push(Number(personIndex));
-      return acc;
-    }, []);
+      .filter((key) => key !== 'max' && scoreBoard[key] === scoreBoard.max)
+      .reduce((acc, personIndex) => {
+        acc.push(Number(personIndex));
+        return acc;
+      }, []);
 }
 
 const testCase = [];
 testCase.push({
-  answers: [1,2,3,4,5],
+  answers: [1, 2, 3, 4, 5],
 });
 testCase.push({
-  answers: [1,3,2,4,2],
+  answers: [1, 3, 2, 4, 2],
 });
 
 const runner = () => testCase.forEach(({answers}) => {

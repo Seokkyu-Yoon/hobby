@@ -4,10 +4,10 @@ function solution(arr) {
 
 const testCase = [];
 testCase.push({
-  arr: [1,1,3,3,0,1,1],
+  arr: [1, 1, 3, 3, 0, 1, 1],
 });
 testCase.push({
-  arr: [4,4,4,3,3],
+  arr: [4, 4, 4, 3, 3],
 });
 
 const runner = () => testCase.forEach(({arr}) => {

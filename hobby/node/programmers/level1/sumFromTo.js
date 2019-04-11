@@ -6,7 +6,7 @@ function solution(a, b) {
     const isOdd = distance % 2;
     return value * vCount + value * isOdd / 2;
   };
-  
+
   return a >= b ? getAnswer(b, a) : getAnswer(a, b);
 }
 

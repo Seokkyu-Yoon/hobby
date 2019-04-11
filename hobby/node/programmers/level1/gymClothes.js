@@ -1,28 +1,28 @@
 function solution(n, lost, reserve) {
   const clothes = (function initalize(n, lost, reserve, index = 1, acc = []) {
-    if(index > n) return acc;
+    if (index > n) return acc;
     let cloth = 1;
-    if(lost.includes(index)) cloth--;
-    if(reserve.includes(index)) cloth++;
+    if (lost.includes(index)) cloth--;
+    if (reserve.includes(index)) cloth++;
     acc.push(cloth);
     return initalize(n, lost, reserve, index + 1, acc);
   })(n, lost, reserve);
 
   const attender = (function share(n, clothes, index = 1) {
-    if(index >= n) return clothes;
-    if(clothes[index-1] == 0 && clothes[index] == 2) {
+    if (index >= n) return clothes;
+    if (clothes[index-1] == 0 && clothes[index] == 2) {
       clothes[index]--;
       clothes[index-1]++;
     }
-    if(clothes[index] == 0 && clothes[index-1] == 2) {
+    if (clothes[index] == 0 && clothes[index-1] == 2) {
       clothes[index-1]--;
       clothes[index]++;
     }
-    if(clothes[index] == 0 && clothes[index+1] == 2) {
+    if (clothes[index] == 0 && clothes[index+1] == 2) {
       clothes[index+1]--;
       clothes[index]++;
     }
-    if(clothes[index+1] == 0 && clothes[index] == 2) {
+    if (clothes[index+1] == 0 && clothes[index] == 2) {
       clothes[index]--;
       clothes[index+1]++;
     }

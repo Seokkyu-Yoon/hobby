@@ -1,6 +1,6 @@
 function solution(n) {
   const getArray = (n, acc = []) => {
-    if(n == 0) return acc;
+    if (n == 0) return acc;
     acc.push(n % 10);
     return getArray(Math.floor(n / 10), acc);
   };

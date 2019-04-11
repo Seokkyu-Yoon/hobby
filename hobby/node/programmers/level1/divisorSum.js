@@ -1,7 +1,7 @@
 function solution(n) {
-  var answer = (function getDivisor(divider = 1, acc = 0) {
-    if(divider > n) return acc;
-    if(n % divider === 0) acc += divider;
+  const answer = (function getDivisor(divider = 1, acc = 0) {
+    if (divider > n) return acc;
+    if (n % divider === 0) acc += divider;
     return getDivisor(divider + 1, acc);
   })();
   return answer;

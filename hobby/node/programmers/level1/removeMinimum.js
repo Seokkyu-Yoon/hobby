@@ -6,7 +6,7 @@ function solution(arr) {
 
 const testCase = [];
 testCase.push({
-  arr: [4,3,2,1],
+  arr: [4, 3, 2, 1],
 });
 testCase.push({
   arr: [10],

@@ -8,11 +8,11 @@ function solution(d, budget) {
 
 const testCase = [];
 testCase.push({
-  d: [1,3,2,5,4],
+  d: [1, 3, 2, 5, 4],
   budget: 9,
 });
 testCase.push({
-  d: [2,2,3,3],
+  d: [2, 2, 3, 3],
   budget: 10,
 });
 const runner = () => testCase.forEach(({d, budget}) => {

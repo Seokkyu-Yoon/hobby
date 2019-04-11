@@ -1,7 +1,7 @@
 function solution(num) {
   const step = (num, acc = 0) => {
-    if(acc > 500) return -1;
-    if(num == 1) return acc;
+    if (acc > 500) return -1;
+    if (num == 1) return acc;
     return num % 2 === 0 ?
       step(num / 2, acc + 1) :
       step(num + num + num + 1, acc + 1);

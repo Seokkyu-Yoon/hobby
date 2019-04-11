@@ -1,6 +1,6 @@
 function solution(n) {
   const getNumberToReverseArr = (n, acc = []) => {
-    if(n == 0) return acc;
+    if (n == 0) return acc;
     acc.push(n % 10);
     return getNumberToReverseArr(Math.floor(n/10), acc);
   };

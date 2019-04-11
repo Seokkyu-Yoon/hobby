@@ -1,5 +1,5 @@
 function solution(arr, divisor) {
-  let answer = arr.filter((element) => element % divisor == 0).sort((a, b) => a - b);
+  const answer = arr.filter((element) => element % divisor == 0).sort((a, b) => a - b);
   return answer.length > 0 ? answer : [-1];
 }
 

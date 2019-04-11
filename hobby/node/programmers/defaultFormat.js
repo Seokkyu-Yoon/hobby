@@ -1,10 +1,11 @@
+/* eslint-disable require-jsdoc */
 function solution() {
-  return ;
+  return;
 }
 
 const testCase = [];
 testCase.push({
-  
+
 });
 
 const runner = () => testCase.forEach(() => {

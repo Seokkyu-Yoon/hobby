@@ -1,17 +1,20 @@
 function solution(n) {
-  let answer = '';
-  for (let i = 0; i < n; i++) {
-    answer = i % 2 == 0 ? `${answer}수` : `${answer}박`;
+  const binary = ((acc) => {
+
+  })([]);
+  while (n > 0) {
+    binary.push(n & 1);
+    n = n >> 1;
   }
-  return answer;
+  return binary;
 }
 
 const testCase = [];
 testCase.push({
-  n: 3,
+  n: 78,
 });
 testCase.push({
-  n: 4,
+  n: 15,
 });
 
 const runner = () => testCase.forEach(({n}) => {

@@ -2,8 +2,8 @@ function solution(n, m) {
   const min = n > m ? m : n;
   const max = n > m ? n : m;
   const answer = (function calculate(min, max, index = 2, gcd = 1) {
-    if(min == 1 || index > min) return [gcd, gcd * min * max];
-    if(min % index == 0 && max % index == 0) {
+    if (min == 1 || index > min) return [gcd, gcd * min * max];
+    if (min % index == 0 && max % index == 0) {
       gcd *= index;
       min /= index;
       max /= index;

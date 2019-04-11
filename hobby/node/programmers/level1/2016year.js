@@ -1,8 +1,14 @@
-const solution = (a, b) => {
+/**
+ * This function is called when get 2018/a/b's date
+ * @param {Number} a
+ * @param {Number} b
+ * @return {String} 2018/a/b's date
+ */
+function solution(a, b) {
   const days = ['THU', 'FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED'];
   const dateOfMonth = {1: 31, 2: 29, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31};
   const getDay = (a, b, i = 1) => {
-    if(i == a) return b % 7;
+    if (i == a) return b % 7;
     b += dateOfMonth[i];
     return getDay(a, b, i + 1);
   };

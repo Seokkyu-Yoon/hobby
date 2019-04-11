@@ -4,18 +4,18 @@ function solution(s, n) {
   const A = 'A'.charCodeAt(0);
   const Z = 'Z'.charCodeAt(0);
 
-  const isLower = ascii => ascii >= a && ascii <= z;
-  const isUpper = ascii => ascii >= A && ascii <= Z;
-  const caesarLower = ascii => String.fromCharCode(a + ((ascii - a + n) % 26));
-  const caesarUpper = ascii => String.fromCharCode(A + ((ascii - A + n) % 26));
+  const isLower = (ascii) => ascii >= a && ascii <= z;
+  const isUpper = (ascii) => ascii >= A && ascii <= Z;
+  const caesarLower = (ascii) => String.fromCharCode(a + ((ascii - a + n) % 26));
+  const caesarUpper = (ascii) => String.fromCharCode(A + ((ascii - A + n) % 26));
 
   return s.split(' ').reduce((acc, splited) => {
-    acc.push(Array.from(splited).map(value => {
+    acc.push(Array.from(splited).map((value) => {
       const ascii = value.charCodeAt(0);
-      if(isLower(ascii)) {
+      if (isLower(ascii)) {
         return caesarLower(ascii);
       }
-      if(isUpper(ascii)) {
+      if (isUpper(ascii)) {
         return caesarUpper(ascii);
       }
       return String.fromCharCode(ascii);

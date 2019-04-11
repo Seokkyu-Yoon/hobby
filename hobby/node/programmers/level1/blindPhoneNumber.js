@@ -2,7 +2,7 @@ function solution(phone_number) {
   const size = phone_number.length - 4;
   const lastNum = phone_number.substring(size);
   const star = (size, i = 0, acc ='') => {
-    if(i == size) return acc;
+    if (i == size) return acc;
     acc = `${acc}*`;
     return star(size, i + 1, acc);
   };
