@@ -4,7 +4,7 @@
    
 ```
 commands
-node ./programmers/cli.js <filePathLocal> <fileName>
-(ex) node ./programmers/cli.js level1 arrAdder
+node ./programmers/cli <filePathLocal> <fileName>
+(ex) node ./programmers/cli level1 arrAdder
 ```
 #  
