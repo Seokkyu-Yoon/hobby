@@ -72,7 +72,12 @@ testCase.push({
   answer: 0,
 });
 
-const runner = () => testCase.forEach(({begin, target, words, answer}, index) => {
+const runner = () => testCase.forEach(({
+  begin,
+  target,
+  words,
+  answer,
+}, index) => {
   console.log(`${index + 1}-case:`);
   try {
     const myResult = solution(begin, target, words);
