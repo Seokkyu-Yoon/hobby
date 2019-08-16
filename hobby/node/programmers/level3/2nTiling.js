@@ -27,7 +27,7 @@ testCase.push({
 });
 testCase.push({
   n: 2000,
-  result: 694725,
+  result: 276439883,
 });
 testCase.push({
   n: 60000,
