@@ -48,7 +48,10 @@ const runner = () => testCase.forEach(({record, result}, index) => {
   console.log(`${index + 1}-case:`);
   try {
     const myResult = solution(record);
-    console.log(`  result: ${myResult}\tcorrect:${result}`);
+    console.log('  result');
+    console.log(myResult);
+    console.log('  correct');
+    console.log(result);
   } catch (e) {
     console.log(e);
   }
