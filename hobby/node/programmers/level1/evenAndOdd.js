@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(num) {
   return num % 2 == 0 ? 'Even' : 'Odd';
 }

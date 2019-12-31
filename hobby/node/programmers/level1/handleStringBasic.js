@@ -1,5 +1,7 @@
+/* eslint-disable require-jsdoc */
 const solution = (s) => {
-  return (s.length == 4 || s.length == 6) && !Array.from(s).some((c) => isNaN(c));
+  return (s.length == 4 || s.length == 6) &&
+  !Array.from(s).some((c) => isNaN(c));
 };
 
 const testCase = [];

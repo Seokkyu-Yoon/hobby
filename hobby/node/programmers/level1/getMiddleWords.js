@@ -1,5 +1,8 @@
+/* eslint-disable require-jsdoc */
 function solution(s) {
-  const indexes = s.length%2 == 1 ? [parseInt(s.length/2)] : [parseInt(s.length/2)-1, parseInt(s.length/2)];
+  const indexes = s.length%2 == 1 ?
+  [parseInt(s.length/2)] :
+  [parseInt(s.length/2)-1, parseInt(s.length/2)];
   return `${s.charAt(indexes[0])}${indexes[1] ? s.charAt(indexes[1]) : ''}`;
 }
 

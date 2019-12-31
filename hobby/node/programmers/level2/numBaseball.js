@@ -15,7 +15,7 @@ function solution(baseball) {
       }).length === strike + ball &&
       currNum.filter((num, index) => {
         return value.indexOf(num) === index;
-      }).length === strike
+      }).length === strike,
     );
   });
   return cases.length;

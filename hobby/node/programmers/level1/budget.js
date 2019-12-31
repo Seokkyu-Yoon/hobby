@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(d, budget) {
   return (function getSupportable(sortedCost, budget, index = 0) {
     return sortedCost[index] > budget || index === sortedCost.length ?

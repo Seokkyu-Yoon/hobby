@@ -7,11 +7,11 @@ function solution(jobs = []) {
     const minRequire = Math.min.apply(
         null,
         jobs.filter(([burstTime]) =>
-          burstTime <= timeSeries
-        ).map((job) => job[1])
+          burstTime <= timeSeries,
+        ).map((job) => job[1]),
     );
     const jobIndex = jobs.findIndex(([burstTime, require]) =>
-      burstTime <= timeSeries && require === minRequire
+      burstTime <= timeSeries && require === minRequire,
     );
     if (jobIndex === -1) {
       timeSeries += 1;

@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(a, b) {
   const getAnswer = (from, to) => {
     const distance = to - from + 1;

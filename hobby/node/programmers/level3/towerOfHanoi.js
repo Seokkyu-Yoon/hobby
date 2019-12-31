@@ -5,7 +5,7 @@ const getMoveLog = (moveLog) => {
         if (value === 2) return 3;
         if (value === 3) return 2;
         return value;
-      }))
+      })),
   ));
   return [
     ...prevResult,

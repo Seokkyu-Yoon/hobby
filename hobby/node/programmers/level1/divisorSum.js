@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(n) {
   const answer = (function getDivisor(divider = 1, acc = 0) {
     if (divider > n) return acc;

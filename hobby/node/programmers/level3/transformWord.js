@@ -6,7 +6,7 @@ function solution(begin, target, words) {
   const wordLength = begin.length;
   const size = words.length;
   const table = new Array(size).fill(null).map(() =>
-    new Array(size).fill(false)
+    new Array(size).fill(false),
   );
 
   for (let y = 0; y < size; y += 1) {

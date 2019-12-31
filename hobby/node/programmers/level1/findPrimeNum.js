@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(n) {
   const numbers = new Array(n+1);
 

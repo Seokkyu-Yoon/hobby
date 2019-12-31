@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(seoul) {
   let count = -1;
   seoul.some((element) => {

@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(x) {
   const getArr = (x, acc = []) => {
     if (x == 0) return acc;

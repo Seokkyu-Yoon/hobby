@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(strings, n) {
   const words = strings.reduce((acc, string) => {
     if (acc[string[n]] === undefined) acc[string[n]] = [];

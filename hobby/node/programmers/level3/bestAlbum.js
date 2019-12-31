@@ -8,12 +8,12 @@ function solution(genres, plays) {
 
   const mergedRecords = [...new Set(genres)].map((genreSet) =>
     records.filter(({genre}) =>
-      genre === genreSet
+      genre === genreSet,
     ).reduce((acc, {id, play}) => {
       acc.play += play;
       acc.albums.push(id);
       return acc;
-    }, {genre: genreSet, play: 0, albums: []})
+    }, {genre: genreSet, play: 0, albums: []}),
   ).sort((a, b) => b.play - a.play);
 
   return mergedRecords.reduce((bucket, {albums}) => {

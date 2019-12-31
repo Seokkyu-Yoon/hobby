@@ -2,7 +2,7 @@
 function solution(name) {
   const nameSize = name.length;
   const moveCursors = [...name].map((letter) =>
-    Math.min(letter.charCodeAt() - 65, 91 - letter.charCodeAt())
+    Math.min(letter.charCodeAt() - 65, 91 - letter.charCodeAt()),
   );
   let move = 0;
   let currIndex = 0;

@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(n) {
   let answer = '';
   for (let i = 0; i < n; i++) {

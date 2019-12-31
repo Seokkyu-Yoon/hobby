@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(n, lost, reserve) {
   const clothes = (function initalize(n, lost, reserve, index = 1, acc = []) {
     if (index > n) return acc;

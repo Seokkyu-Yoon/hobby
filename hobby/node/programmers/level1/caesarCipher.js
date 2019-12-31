@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(s, n) {
   const a = 'a'.charCodeAt(0);
   const z = 'z'.charCodeAt(0);
@@ -6,8 +7,12 @@ function solution(s, n) {
 
   const isLower = (ascii) => ascii >= a && ascii <= z;
   const isUpper = (ascii) => ascii >= A && ascii <= Z;
-  const caesarLower = (ascii) => String.fromCharCode(a + ((ascii - a + n) % 26));
-  const caesarUpper = (ascii) => String.fromCharCode(A + ((ascii - A + n) % 26));
+  const caesarLower = (ascii) => String.fromCharCode(
+      a + ((ascii - a + n) % 26),
+  );
+  const caesarUpper = (ascii) => String.fromCharCode(
+      A + ((ascii - A + n) % 26),
+  );
 
   return s.split(' ').reduce((acc, splited) => {
     acc.push(Array.from(splited).map((value) => {

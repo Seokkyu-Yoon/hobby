@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(s) {
   return parseInt(s);
 }

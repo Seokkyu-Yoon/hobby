@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(arr1, arr2) {
   return ((arr1, arr2) => (
     (function addLine(x = 0, acc = []) {
@@ -7,7 +8,7 @@ function solution(arr1, arr2) {
             if (y == arr1[x].length) return acc;
             acc.push(arr1[x][y] + arr2[x][y]);
             return add(y + 1, acc);
-          })()
+          })(),
       );
       return addLine(x + 1, acc);
     })()

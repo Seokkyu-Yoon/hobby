@@ -1,7 +1,7 @@
 /* eslint-disable require-jsdoc */
 function solution(N, road, K) {
   const connections = new Array(N+1).fill(null).map(() =>
-    new Array(N+1).fill(-1)
+    new Array(N+1).fill(-1),
   );
   road.forEach(([village1, village2, cValue]) => {
     const pValue = connections[village1][village2];

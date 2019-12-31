@@ -14,7 +14,7 @@ function solution(progresses, speeds) {
       index = 0,
       frontJobTime = 0,
       count = 0,
-      acc = []
+      acc = [],
   ) => {
     if (progressTimes.length === index) {
       acc.push(count);

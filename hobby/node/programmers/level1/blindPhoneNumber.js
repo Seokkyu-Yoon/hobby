@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(phone_number) {
   const size = phone_number.length - 4;
   const lastNum = phone_number.substring(size);

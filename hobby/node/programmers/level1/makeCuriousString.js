@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(s) {
   return s.split(' ').reduce((acc, splited) => {
     acc.push(
@@ -5,8 +6,8 @@ function solution(s) {
             (value, index) =>
           index % 2 == 0 ?
             value.toUpperCase():
-            value.toLowerCase()
-        ).join('')
+            value.toLowerCase(),
+        ).join(''),
     );
     return acc;
   }, []).join(' ');

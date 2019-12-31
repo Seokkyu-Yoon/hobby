@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(s) {
   let pCount = 0;
   let yCount = 0;

@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(arr) {
   return arr.reduce((acc = 0, element) => acc + element) / arr.length;
 }

@@ -68,7 +68,7 @@ function solution(nodeinfo) {
     }
     area = children.reduce((bucket, child) => {
       const areaIndex = area.findIndex(({from, to}) =>
-        child.x >= from && child.x <= to
+        child.x >= from && child.x <= to,
       );
       const parent = parents[Math.floor(areaIndex / 2)];
       if (areaIndex % 2) {

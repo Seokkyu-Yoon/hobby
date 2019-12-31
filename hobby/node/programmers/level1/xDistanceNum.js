@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(x, n) {
   const getArr = (x, n, index = 1, acc = []) => {
     if (index > n) return acc;

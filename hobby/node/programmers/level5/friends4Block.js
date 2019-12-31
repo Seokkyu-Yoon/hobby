@@ -1,7 +1,7 @@
 /* eslint-disable require-jsdoc */
 function solution(m, n, board) {
   const reformedBoard = new Array(n).fill(null).map((v, x) =>
-    new Array(m).fill(null).map((v, y) => board[y][x]).reverse()
+    new Array(m).fill(null).map((v, y) => board[y][x]).reverse(),
   );
   let answer = 0;
   while (true) {

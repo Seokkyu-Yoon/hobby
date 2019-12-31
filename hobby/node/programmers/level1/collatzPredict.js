@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(num) {
   const step = (num, acc = 0) => {
     if (acc > 500) return -1;

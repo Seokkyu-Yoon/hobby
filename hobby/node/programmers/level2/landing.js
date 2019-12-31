@@ -4,7 +4,7 @@ function solution(land) {
     return row.map((score, sIndex) => {
       return score + Math.max.apply(
           null,
-          scoreHolder.filter((value, rIndex) => rIndex !== sIndex)
+          scoreHolder.filter((value, rIndex) => rIndex !== sIndex),
       );
     });
   }, new Array(4).fill(0)));

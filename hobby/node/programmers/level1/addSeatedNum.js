@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(n) {
   const addNum = (n, acc = 0) => {
     if (n == 0) return acc;

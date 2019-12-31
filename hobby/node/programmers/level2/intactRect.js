@@ -2,43 +2,43 @@
 const init = (w, h) => {
   const isVertical = w < h;
   let gcd = isVertical ? w : h;
-  
+
   while (gcd > 1) {
-      if (w % gcd === 0 && h % gcd === 0) return { isVertical, gcd };
-      gcd--;
+    if (w % gcd === 0 && h % gcd === 0) return {isVertical, gcd};
+    gcd--;
   }
-  return { isVertical, gcd };
-}
+  return {isVertical, gcd};
+};
 
 const getIgnore = ({width, height, isVertical}) => {
   const max = isVertical ? width : height;
-  
+
   let result = 0;
   let prevPosition = 0;
   for (let i = 1; i <= max; i++) {
-      const currPosition = isVertical
-          ? height * i / width
-          : width * i / height;
-      
-      result += Math.ceil(currPosition) - Math.floor(prevPosition);
-      prevPosition = currPosition;
+    const currPosition = isVertical ?
+          height * i / width :
+          width * i / height;
+
+    result += Math.ceil(currPosition) - Math.floor(prevPosition);
+    prevPosition = currPosition;
   }
   return result;
-}
+};
 
-function solution(w,h){
-const {
-      gcd,
-      isVertical
+function solution(w, h) {
+  const {
+    gcd,
+    isVertical,
   } = init(w, h);
-  
+
   const fixed = {
-      width: w / gcd,
-      height: h / gcd,
+    width: w / gcd,
+    height: h / gcd,
   };
   return w * h - getIgnore({
-      ...fixed,
-      isVertical,
+    ...fixed,
+    isVertical,
   }) * gcd;
 }
 

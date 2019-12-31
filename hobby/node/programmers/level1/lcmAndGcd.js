@@ -1,3 +1,4 @@
+/* eslint-disable require-jsdoc */
 function solution(n, m) {
   const min = n > m ? m : n;
   const max = n > m ? n : m;

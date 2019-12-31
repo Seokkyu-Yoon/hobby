@@ -16,10 +16,10 @@ const compareString = (a, b, wordLength) => {
 function solution(tickets) {
   const wordLength = tickets[0][0].length;
   const connections = tickets.sort((a, b) =>
-    compareString(a, b, wordLength)
+    compareString(a, b, wordLength),
   ).reduce((bucket, [departure, arrival]) => {
     const connection = bucket.find(({departure: signed}) =>
-      signed === departure
+      signed === departure,
     );
     if (connection) {
       connection.arrivals.push(arrival);
@@ -35,7 +35,7 @@ function solution(tickets) {
   let currLocate = 'ICN';
   while (loop-- > 0) {
     let connection = connections.find(({departure}) =>
-      departure === currLocate
+      departure === currLocate,
     );
 
     if (!connection || connection.arrivals.length === 0) {
@@ -45,7 +45,7 @@ function solution(tickets) {
         index -= 1;
         const branchLocate = seq[index];
         const currSeq = connections.find(({departure}) =>
-          departure === branchLocate
+          departure === branchLocate,
         );
         if (currSeq.arrivals.length > 0) {
           branch = branchLocate;
@@ -54,7 +54,7 @@ function solution(tickets) {
       finals = [...seq.slice(index + 1), ...finals];
       seq = seq.slice(0, index + 1);
       connection = connections.find(({departure}) =>
-        departure === branch
+        departure === branch,
       );
     }
 
