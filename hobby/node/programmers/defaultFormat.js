@@ -11,6 +11,7 @@ testCase.push({
 const runner = () => testCase.forEach(({}, index) => {
   console.log(`${index + 1}-case:`);
   try {
+    // eslint-disable-next-line no-unused-vars
     const myResult = solution();
     // if answer is value use it
     // console.log(`  result: ${myResult}\tcorrect:${myResult === result}`);
