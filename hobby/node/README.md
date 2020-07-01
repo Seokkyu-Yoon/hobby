@@ -4,7 +4,10 @@
    
 ```
 commands
-node ./programmers/cli <filePathLocal> <fileName>
+node ./programmers/cli level{level-number} {filename}
 (ex) node ./programmers/cli level1 arrAdder
+
+npm run programmers-level{level-number} {filename}
+(ex) npm run programmers-level1 arrAdder
 ```
 #  
