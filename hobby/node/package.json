@@ -4,6 +4,11 @@
   "description": "My hobby",
   "main": "index.js",
   "scripts": {
+    "programmers-level1": "node programmers/cli.js level1",
+    "programmers-level2": "node programmers/cli.js level2",
+    "programmers-level3": "node programmers/cli.js level3",
+    "programmers-level4": "node programmers/cli.js level4",
+    "programmers-level5": "node programmers/cli.js level5",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
