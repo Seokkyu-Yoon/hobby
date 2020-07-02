@@ -13,11 +13,11 @@ const runner = () => testCase.forEach(({}, index) => {
   try {
     const myResult = solution();
     // if answer is value use it
-    // console.log(`* result: ${myResult}`
+    // console.log(`* myResult: ${myResult}`
     // console.log(`* correct:${myResult === result}`);
 
     // if answer is list use it
-    // console.log('* result');
+    // console.log('* myResult');
     // console.log(myResult);
     // console.log(`* correct: ${JSON.stringify(myResult) === JSON.stringify(result)}`);
   } catch (e) {
