@@ -1,6 +1,6 @@
 /* eslint-disable require-jsdoc */
 function solution() {
-  return;
+
 }
 
 const testCase = [];
@@ -9,18 +9,17 @@ testCase.push({
 });
 
 const runner = () => testCase.forEach(({}, index) => {
-  console.log(`${index + 1}-case:`);
+  console.log(` - ${index + 1}-case:`);
   try {
-    // eslint-disable-next-line no-unused-vars
     const myResult = solution();
     // if answer is value use it
-    // console.log(`  result: ${myResult}\tcorrect:${myResult === result}`);
+    // console.log(`* result: ${myResult}`
+    // console.log(`* correct:${myResult === result}`);
 
     // if answer is list use it
-    // console.log('  result');
+    // console.log('* result');
     // console.log(myResult);
-    // console.log('  correct');
-    // console.log(myResult === answer);
+    // console.log(`* correct: ${JSON.stringify(myResult) === JSON.stringify(result)}`);
   } catch (e) {
     console.log(e);
   }
