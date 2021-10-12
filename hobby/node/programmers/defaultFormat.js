@@ -1,4 +1,4 @@
-/* eslint-disable require-jsdoc */
+/* eslint-disable no-console */
 function solution() {
 
 }
@@ -8,21 +8,18 @@ testCase.push({
 
 });
 
-const runner = () => testCase.forEach(({}, index) => {
-  console.log(` - ${index + 1}-case:`);
-  try {
-    const myResult = solution();
-    // if answer is value use it
-    // console.log(`* myResult: ${myResult}`
-    // console.log(`* correct:${myResult === result}`);
+function test() {
+  testCase.forEach(({ result }, index) => {
+    console.log(` - ${index + 1}-case:`);
+    try {
+      const myResult = solution();
+      console.log('* myResult');
+      console.log(myResult);
+      console.log(`* correct: ${JSON.stringify(myResult) === JSON.stringify(result)}`);
+    } catch (e) {
+      console.log(e);
+    }
+  });
+}
 
-    // if answer is list use it
-    // console.log('* myResult');
-    // console.log(myResult);
-    // console.log(`* correct: ${JSON.stringify(myResult) === JSON.stringify(result)}`);
-  } catch (e) {
-    console.log(e);
-  }
-});
-
-module.exports = runner;
+module.exports = test;
