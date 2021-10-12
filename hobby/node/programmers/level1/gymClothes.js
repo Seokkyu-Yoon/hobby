@@ -1,36 +1,32 @@
-/* eslint-disable require-jsdoc */
+/* eslint-disable no-console */
+function getAttendent(students, i = 1) {
+  if (i === students.length) return students.reduce((acc, cloth) => (cloth > 0 ? acc + 1 : acc), 0);
+  if (students[i] > 0) return getAttendent(students, i + 1);
+  if (students[i - 1] === 2) {
+    const studentsCopied = [...students];
+    studentsCopied[i - 1] -= 1;
+    studentsCopied[i] += 1;
+    return getAttendent(studentsCopied, i + 1);
+  }
+  if (students[i + 1] === 2) {
+    const studentsCopied = [...students];
+    studentsCopied[i + 1] -= 1;
+    studentsCopied[i] += 1;
+    return getAttendent(studentsCopied, i + 1);
+  }
+  return getAttendent(students, i + 1);
+}
+
 function solution(n, lost, reserve) {
-  const clothes = (function initalize(n, lost, reserve, index = 1, acc = []) {
-    if (index > n) return acc;
-    let cloth = 1;
-    if (lost.includes(index)) cloth--;
-    if (reserve.includes(index)) cloth++;
-    acc.push(cloth);
-    return initalize(n, lost, reserve, index + 1, acc);
-  })(n, lost, reserve);
-
-  const attender = (function share(n, clothes, index = 1) {
-    if (index >= n) return clothes;
-    if (clothes[index-1] == 0 && clothes[index] == 2) {
-      clothes[index]--;
-      clothes[index-1]++;
-    }
-    if (clothes[index] == 0 && clothes[index-1] == 2) {
-      clothes[index-1]--;
-      clothes[index]++;
-    }
-    if (clothes[index] == 0 && clothes[index+1] == 2) {
-      clothes[index+1]--;
-      clothes[index]++;
-    }
-    if (clothes[index+1] == 0 && clothes[index] == 2) {
-      clothes[index]--;
-      clothes[index+1]++;
-    }
-    return share(n, clothes, index + 1);
-  })(n - 1, clothes).reduce((acc, cloth) => acc += cloth > 0, 0);
-
-  return attender;
+  const students = new Array(n + 1).fill(1);
+  students[0] = 0;
+  lost.forEach((i) => {
+    students[i] -= 1;
+  });
+  reserve.forEach((i) => {
+    students[i] += 1;
+  });
+  return getAttendent(students);
 }
 
 const testCase = [];
@@ -38,20 +34,35 @@ testCase.push({
   n: 5,
   lost: [2, 4],
   reserve: [1, 3, 5],
+  result: 5,
 });
 testCase.push({
   n: 5,
   lost: [2, 4],
   reserve: [3],
+  result: 4,
 });
 testCase.push({
   n: 3,
   lost: [3],
   reserve: [1],
+  result: 2,
 });
 
-const runner = () => testCase.forEach(({n, lost, reserve}) => {
-  console.log(solution(n, lost, reserve));
-});
+function test() {
+  testCase.forEach(({
+    n, lost, reserve, result,
+  }, index) => {
+    console.log(` - ${index + 1}-case:`);
+    try {
+      const myResult = solution(n, lost, reserve);
+      console.log('* myResult');
+      console.log(myResult);
+      console.log(`* correct: ${JSON.stringify(myResult) === JSON.stringify(result)}`);
+    } catch (e) {
+      console.log(e);
+    }
+  });
+}
 
-module.exports = runner;
+module.exports = test;
