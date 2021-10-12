@@ -1,41 +1,50 @@
-/**
- * This function is called when get 2018/a/b's date
- * @param {Number} a
- * @param {Number} b
- * @return {String} 2018/a/b's date
- */
+/* eslint-disable no-console */
+const dayMap = [
+  'SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT',
+];
+function getFormattedDay(day) {
+  return dayMap[day];
+}
 function solution(a, b) {
-  const days = ['THU', 'FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED'];
-  const dateOfMonth = {
-    1: 31,
-    2: 29,
-    3: 31,
-    4: 30,
-    5: 31,
-    6: 30,
-    7: 31,
-    8: 31,
-    9: 30,
-    10: 31,
-    11: 30,
-    12: 31,
-  };
-  const getDay = (a, b, i = 1) => {
-    if (i == a) return b % 7;
-    b += dateOfMonth[i];
-    return getDay(a, b, i + 1);
-  };
-  return days[getDay(a, b) % 7];
-};
+  const strMonth = String(a).padStart(2, '0');
+  const strDate = String(b).padStart(2, '0');
+  const date = new Date(`2016-${strMonth}-${strDate}`);
+  return getFormattedDay(date.getDay());
+}
 
+function solution1(a, b) {
+  const dates = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  let day = 5; // 2016-01-01 is Friday
+  for (let month = 1; month < a; month += 1) {
+    day = (day + dates[month]) % 7;
+  }
+  day = (day + b - 1) % 7;
+  return getFormattedDay(day);
+}
 const testCase = [];
 testCase.push({
   a: 5,
   b: 24,
+  result: 'TUE',
+});
+testCase.push({
+  a: 2,
+  b: 29,
+  result: 'MON',
 });
 
-const runner = () => testCase.forEach(({a, b}) => {
-  console.log(solution(a, b));
-});
+function test() {
+  testCase.forEach(({ a, b, result }, index) => {
+    console.log(` - ${index + 1}-case:`);
+    try {
+      const myResult = solution(a, b);
+      console.log('* myResult');
+      console.log(myResult);
+      console.log(`* correct: ${JSON.stringify(myResult) === JSON.stringify(result)}`);
+    } catch (e) {
+      console.log(e);
+    }
+  });
+}
 
-module.exports = runner;
+module.exports = test;
