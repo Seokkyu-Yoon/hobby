@@ -11,5 +11,8 @@ module.exports = {
     ecmaVersion: 11,
   },
   rules: {
+    camelcase: 'off',
+    'no-param-reassign': 'off',
+    'no-console': 'off',
   },
 };
